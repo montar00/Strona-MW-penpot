@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Pola - Prostokat</title>
+    <title>Kalkulator Pola - Trapez</title>
     <style>
         /* Podstawowe style i tło */
         * {
@@ -61,18 +61,18 @@
             padding: 0 40px;
             margin-bottom: 50px;
         }
-        /* Podgląd kształtu (Prostokat) */
+        /* Podgląd kształtu (trapez) */
         .shape-preview {
             background-color: #4ed8e4;
-            width: 100px;
-            height: 200px;
+            width: 180px;
+            height: 120px;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
+            padding-bottom: 40px;
             color: #1a1a1a;
             font-weight: bold;
-            font-size: 18px;
-            border-radius: 4px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
         }
         /* Pole wprowadzania danych */
         .input-field {
@@ -120,9 +120,10 @@
             Wpisz Odpowiednie Wartości Dla Działki O Wybranym Kształcie
         </div>
         <div class="workspace">
-            <div class="shape-preview">Prostokat</div>
+            <div class="shape-preview">Trapez</div>
             <input type="number" class="input-field" placeholder="Bok A">
             <input type="number" class="input-field" placeholder="Bok B">
+            <input type="number" class="input-field" placeholder="Wysokość">
             <button class="btn">Oblicz</button>
             <div class="result-box"></div>
         </div>
