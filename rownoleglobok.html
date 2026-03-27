@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Pola - Równoległobok</title>
+    <style>
+        /* Podstawowe style i tło */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+        /* Główny kontener (karta) */
+        .card {
+            background-color: #1e1e26;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            text-align: center;
+            padding-bottom: 40px;
+        }
+        /* Nagłówek z tekstem */
+        .header {
+            background-color: #252538;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 22px;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+        /* Niebieska belka z instrukcją */
+        .instruction-banner {
+            background-color: #2563eb;
+            width: 85%;
+            margin: 0 auto 40px auto;
+            padding: 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        /* (środek strony) */
+        .workspace {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0 40px;
+            margin-bottom: 50px;
+        }
+        /* Podgląd kształtu (Równoległobok) */
+        .shape-preview {
+            background-color: #4ed8e4;
+            width: 180px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #1a1a1a;
+            font-weight: bold;
+            transform: skewX(-20deg);
+            margin: 20px;
+        }
+        /* Pole wprowadzania danych */
+        .input-field {
+            background-color: #5c6299;
+            border: none;
+            width: 200px;
+            height: 50px;
+            border-radius: 4px;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            outline: none;
+        }
+        /* Prawy duży element (miejsce na wynik)*/
+        .result-box {
+            background-color: #2563eb;
+            width: 220px;
+            height: 220px;
+            border-radius: 4px;
+        }
+        /* Przyciski */
+        .btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline-block;
+            transition: opacity 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>Witaj Użytkowniku<br>Na Tej Stronie Obliczysz Pole Swojej Działki</h1>
+        </div>
+        <div class="instruction-banner">
+            Wpisz Odpowiednie Wartości Dla Działki O Wybranym Kształcie
+        </div>
+        <div class="workspace">
+            <div class="shape-preview">Równoległobok</div>
+            <input type="number" class="input-field" placeholder="Bok A">
+            <input type="number" class="input-field" placeholder="Wysokość">
+            <button class="btn">Oblicz</button>
+            <div class="result-box"></div>
+        </div>
+        <a href="main.html" class="btn">Powrót</a> 
+    </div>
+</body>
+</html>
