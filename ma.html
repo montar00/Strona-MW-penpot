@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kalkulator Pola Działki</title>
+
+    <style>
+
+        /* podstawowe style */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* Główny kontener strony */
+        .container {
+            background-color: #1e1e26;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        /* Górna sekcja */
+        .header {
+            background-color: #252538;
+            padding: 40px 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        /* Niebieski pasek z instrukcją */
+        .instruction-bar {
+            background-color: #2563eb;
+            margin: 30px auto;
+            padding: 12px;
+            width: 85%;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Sekcja z przyciskami */
+        .main-content {
+            padding-bottom: 50px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
+            gap: 20px;
+            width: 85%;
+            margin: 0 auto;
+        }
+        /* Stylizacja przycisków */
+        .shape-button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 15px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            text-decoration: none;
+        }
+        .shape-button:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        .shape-button:active {
+            transform: translateY(0);
+        }
+        .header h1 {
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Witaj Użytkowniku<br>Na Tej Stronie Obliczysz Pole Swojej Działki</h1>
+        </div>
+        <div class="main-content">
+            <div class="instruction-bar">
+                Wybierz Kształt Odpowiadający Działce
+            </div>
+            <div class="grid-container">
+                <a href="kw.html" class="shape-button">Kwadrat</a>
+                <a href="" class="shape-button">Prostokąt</a>
+                <a href="" class="shape-button">Romb</a>
+                <a href="" class="shape-button">Trapez</a>
+                <a href="" class="shape-button">Równoległobok</a>
+                <a href="" class="shape-button">Trójkąt</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
