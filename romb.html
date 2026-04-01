@@ -88,12 +88,13 @@
             font-size: 18px;
             outline: none;
         }
-        /* Prawy duży element (miejsce na wynik)*/
+        /* miejsce na wynik*/
         .result-box {
             background-color: #2563eb;
             width: 220px;
             height: 220px;
             border-radius: 4px;
+            padding-top: 50px;
         }
         /* Przyciski */
         .btn {
@@ -123,12 +124,26 @@
         </div>
         <div class="workspace">
             <div class="shape-preview">Romb</div>
-            <input type="number" class="input-field" placeholder="Bok A">
-            <input type="number" class="input-field" placeholder="Wysokość">
-            <button class="btn">Oblicz</button>
-            <div class="result-box"></div>
+            <input type="number" id="Bok_A" class="input-field" placeholder="Przekontna 1">
+            <input type="number" id="Bok_B" class="input-field" placeholder="Przekontna 2">
+            <button class="btn" onclick="Pole_Romb()">Oblicz</button>
+            <div id="result" class="result-box"></div>
         </div>
         <a href="main.html" class="btn">Powrót</a> 
     </div>
+    <script>
+        function Pole_Romb() {
+            const Bok_A = document.getElementById('Bok_A').value;
+            const Bok_B = document.getElementById('Bok_B').value;
+            const resultBox = document.getElementById('result');
+
+            if (Bok_A > 0 && Bok_B > 0) {
+                const Pole = (Bok_A * Bok_B) / 2;
+                resultBox.innerHTML = `Pole działki wynosi: ${Pole} metrów`;
+            } else {
+                resultBox.innerHTML = "Proszę wpisać poprawną długość boków (liczbę większą od 0).";
+            }
+        }
+    </script>
 </body>
 </html>
